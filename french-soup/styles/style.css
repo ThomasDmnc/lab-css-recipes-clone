@@ -1,9 +1,118 @@
-/*Some necessary adjustments*/
-h1, body, html, main {
-  margin: 0;
-}
-/*Import the font and set the default size*/
+/* CSS RESET - do not remove */
+/* Reset default browser styles and provide a consistent starting point */
 html {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: lighter;
+}
+
+/*  Set the font */
+body {
+  font-family: "Helvetica", sans-serif;
+}
+
+/* STYLES */
+/* Write your CSS below */
+
+.banner {
+  height: 650px;
+  background-image: url("../images/soup.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner h1 {
+  font-size: 80px;
+  color: white;
+}
+
+.container {
+  margin: 100px 50px 100px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container section {
+  width: 45%;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.description p {
+  text-align: justify;
+}
+
+.image {
+  margin: 25px auto;
+  display: block;
+  width: 30%;
+  height: auto;
+}
+
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+
+.ingredients-list {
+  list-style: none;
+}
+
+.ingredients-list li::before {
+  content: "- ";
+}
+
+li {
+  padding: 3px;
+}
+
+hr {
+  margin: 20px auto 30px auto;
+	width: 100%;
+}
+
+.sub-title {
+  margin: 20px 0 20px;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.directions {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+
+.direction-list {
+  counter-reset: list;
+  list-style: none;
+}
+
+.direction-list li::before {
+  content: counter(list) ") ";
+  counter-increment: list;
 }
